@@ -1,38 +1,48 @@
-# Python files
-*.pyc
-__pycache__/
 
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints
+### **`.gitignore`**
+```gitignore
+# Node.js
+/node_modules
+/.pnp
+.pnp.js
 
-# Virtual environment
+# React build directory
+/build
+
+# Python
 venv/
-.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
-# Log files
+# Flask specific
+instance/
+.webassets-cache
+
+# Database
+*.sqlite3
+*.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
 *.log
 
-# Model files
-*.pkl
-/models/
-
-# C++ object files and executables
-*.o
-*.out
-*.exe
-
-# IDE files
+# IDE Specific
 .vscode/
-.clion/
 .idea/
 
-# Database files
-*.db
-*.sqlite
-
-# System files
+# Operating System files
 .DS_Store
 Thumbs.db
 
-# Node.js and npm files (if any)
-node_modules/
+# Coverage directory used by testing tools
+coverage/
+
+# Git specific
+*.orig
