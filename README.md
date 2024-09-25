@@ -19,12 +19,6 @@ This project aims to build a predictive model for Valorant, focusing on player p
 - **Database:** PostgreSQL
 - **Tools:** CLion, PyCharm, Git, GitHub Actions for CI/CD
 
-## Project Structure
-- `/src` - Source code for C++ and Python modules.
-- `/data` - Directory for raw and preprocessed datasets.
-- `/models` - Trained models stored as binary files.
-- `/docs` - Project documentation, architecture diagrams, and reports.
-- `/tests` - Unit and integration tests for both C++ and Python.
 
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request for review.
