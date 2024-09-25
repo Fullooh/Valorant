@@ -26,24 +26,6 @@ This project aims to build a predictive model for Valorant, focusing on player p
 - `/docs` - Project documentation, architecture diagrams, and reports.
 - `/tests` - Unit and integration tests for both C++ and Python.
 
-## Getting Started
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/yourusername/valorant-predictive-model.git
-    ```
-2. **Set up the Python environment:**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
-    ```
-3. **Set up the C++ environment:** Follow the instructions in the `requirements.md` file for installing necessary libraries and tools.
-4. **Run the initial setup scripts:** Refer to `/src/python/` for data collection and preprocessing scripts.
-
-## Usage
-- Use the Python Flask frontend to input match data and request predictions from the C++ backend via the REST API.
-- For detailed instructions on running the project, refer to the documentation in the `/docs` folder.
-
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request for review.
 
