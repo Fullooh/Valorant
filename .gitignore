@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ### **`.gitignore`**
 ```gitignore
@@ -46,3 +47,43 @@ coverage/
 
 # Git specific
 *.orig
+=======
+# Python files
+*.pyc
+__pycache__/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Virtual environment
+venv/
+.env
+
+# Log files
+*.log
+
+# Model files
+*.pkl
+/models/
+
+# C++ object files and executables
+*.o
+*.out
+*.exe
+
+# IDE files
+.vscode/
+.clion/
+.idea/
+
+# Database files
+*.db
+*.sqlite
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Node.js and npm files (if any)
+node_modules/
+>>>>>>> a74a969e53a1dddfd7e24726cce9ef18c3395a06
