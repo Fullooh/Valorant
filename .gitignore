@@ -45,3 +45,8 @@ coverage/
 
 # Git specific
 *.orig
+# Ignore environment variables file
+.env
+
+# Ignore Firebase service account key
+backend/services/serviceAccountKey.json
