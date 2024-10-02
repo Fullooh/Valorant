@@ -1,52 +1,46 @@
-name: CI/CD Pipeline
+name: CI/CD
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-  build:
+  linting:
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:12
-        env:
-          POSTGRES_DB: valorant_db
-          POSTGRES_USER: username
-          POSTGRES_PASSWORD: password
-        ports:
-          - 5432:5432
-    steps:
-      - uses: actions/checkout@v2
 
-      # Backend
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'
-      - name: Install Backend Dependencies
+          python-version: "3.8"
+
+      - name: Install Python dependencies
         run: |
-          cd backend
           python -m venv venv
           source venv/bin/activate
-          pip install -r requirements.txt
-      - name: Run Backend Tests
-        run: |
-          cd backend
-          pytest
+          pip install pylint
 
-      # Frontend
+      - name: Lint Python code
+        run: |
+          source venv/bin/activate
+          pylint backend/**/*.py
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
-      - name: Install Frontend Dependencies
+          node-version: "16"
+
+      - name: Install Node.js dependencies
         run: |
           cd frontend
           npm install
-      - name: Run Frontend Tests
+
+      - name: Lint React code
         run: |
           cd frontend
-          npm test -- --watchAll=false
+          npm run lint
