@@ -50,3 +50,4 @@ coverage/
 
 # Ignore Firebase service account key
 backend/services/serviceAccountKey.json
+backend/services/serviceAccountKey.json
